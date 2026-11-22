@@ -32,9 +32,19 @@ exports.getProducts = async (req, res) => {
       }
     }
 
-    // 2. Filter by search keyword
+    // 2. Filter by search keyword (supports both accented name and unaccented slug)
     if (search) {
-      query.name = { $regex: search, $options: 'i' };
+      const searchSlug = search
+        .toLowerCase()
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .replace(/[đĐ]/g, 'd')
+        .replace(/(\s+)/g, '-');
+
+      query.$or = [
+        { name: { $regex: search, $options: 'i' } },
+        { slug: { $regex: searchSlug, $options: 'i' } },
+      ];
     }
 
     let productsQuery = Product.find(query);

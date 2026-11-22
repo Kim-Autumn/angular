@@ -7,15 +7,28 @@ export const routes: Routes = [
   },
   {
     path: 'products',
-    loadComponent: () => import('./components/products/products').then((m) => m.Products),
+    loadComponent: () =>
+      import('./components/products/products').then((m) => m.Products),
   },
   {
     path: 'category/:slug',
-    loadComponent: () => import('./components/products/products').then((m) => m.Products),
+    loadComponent: () =>
+      import('./components/products/products').then((m) => m.Products),
+  },
+  {
+    path: 'product/:slug',
+    loadComponent: () =>
+      import('./components/product/product').then((m) => m.ProductComponent),
   },
   {
     path: 'product/:id',
-    loadComponent: () => import('./components/product/product').then((m) => m.ProductComponent),
+    loadComponent: () =>
+      import('./components/product/product').then((m) => m.ProductComponent),
+  },
+  {
+    path: 'bai_viet',
+    loadComponent: () =>
+      import('./components/blog/blog').then((m) => m.BlogComponent),
   },
   {
     path: 'cart',

@@ -157,6 +157,10 @@
   background: #ef4444;
 }
 
+.label-hot {
+  background: #f59e0b;
+}
+
 .product-info {
   padding: 10px 10px 12px;
   display: flex;

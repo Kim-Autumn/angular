@@ -56,9 +56,19 @@
         }
       </div>
 
+      <!-- SỐ LƯỢNG MUA -->
+      <div style="display: flex; align-items: center; gap: 12px; margin: 16px 0;">
+        <span style="font-weight: 600; font-size: 13px;">Số lượng:</span>
+        <div style="display: flex; align-items: center; gap: 6px;">
+          <button type="button" (click)="decreaseQty()" style="width: 28px; height: 28px; border-radius: 6px; border: 1px solid #ccc; background: #f3f4f6; cursor: pointer; font-weight: bold;">-</button>
+          <span style="min-width: 24px; text-align: center; font-weight: bold;">{{ quantity() }}</span>
+          <button type="button" (click)="increaseQty()" style="width: 28px; height: 28px; border-radius: 6px; border: 1px solid #ccc; background: #f3f4f6; cursor: pointer; font-weight: bold;">+</button>
+        </div>
+      </div>
+
       <div class="detail-actions">
-        <a routerLink="/cart" class="btn-cart">🛒 Thêm vào giỏ</a>
-        <a routerLink="/cart" class="btn-buy-now">Mua ngay</a>
+        <button type="button" (click)="addToCart()" class="btn-cart">🛒 Thêm vào giỏ</button>
+        <button type="button" (click)="buyNow()" class="btn-buy-now">Mua ngay</button>
       </div>
 
       <div class="back-link">

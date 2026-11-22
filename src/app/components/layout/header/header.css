@@ -26,6 +26,7 @@
 }
 
 .cart {
+  position: relative;
   font-size: 20px;
   background: var(--orange-light);
   border-radius: 12px;
@@ -35,6 +36,25 @@
   justify-content: center;
   cursor: pointer;
   transition: transform 0.15s ease;
+  text-decoration: none;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background: #ef4444;
+  color: white;
+  font-size: 11px;
+  font-weight: 800;
+  min-width: 18px;
+  height: 18px;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 .cart:active {

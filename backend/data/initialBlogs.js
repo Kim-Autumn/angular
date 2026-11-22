@@ -1,0 +1,32 @@
+module.exports = [
+  {
+    id: 1,
+    slug: 'y-nghia-cac-loai-hoa-hong',
+    title: 'Ý nghĩa các loài hoa hồng theo màu sắc bạn nên biết',
+    summary: 'Mỗi màu sắc hoa hồng mang một thông điệp tình yêu và cảm xúc riêng biệt trong cuộc sống.',
+    content: 'Hoa hồng đỏ tượng trưng cho tình yêu mãnh liệt, hoa hồng phấn thể hiện sự ngọt ngào, dịu dàng, trong khi hoa hồng trắng mang ý nghĩa tinh khôi và thuần khiết. Chọn đúng màu hoa sẽ giúp bạn gửi trọn vẹn thông điệp đến người nhận.',
+    image: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=600&auto=format&fit=crop',
+    author: 'Admin BHShop',
+    createdAt: '2026-11-15',
+  },
+  {
+    id: 2,
+    slug: 'bi-quyet-giu-hoa-tuoi-lau',
+    title: '5 Bí quyết đơn giản giữ hoa tươi lâu tại nhà',
+    summary: 'Cách chăm sóc và bảo quản hoa cắm bình tươi đẹp suốt cả tuần mà không bị héo úa.',
+    content: 'Để giữ hoa tươi lâu, bạn nên cắt xéo gốc 45 độ dưới vòi nước, thay nước mỗi ngày, loại bỏ lá ngập trong nước và thêm một chút đường hoặc nước cốt chanh vào bình cắm hoa.',
+    image: 'https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=600&auto=format&fit=crop',
+    author: 'Admin BHShop',
+    createdAt: '2026-11-18',
+  },
+  {
+    id: 3,
+    slug: 'goi-y-chon-hoa-tang-sinh-nhat',
+    title: 'Gợi ý chọn hoa tặng sinh nhật tinh tế cho từng đối tượng',
+    summary: 'Bật mí cách chọn bó hoa mừng sinh nhật phù hợp cho mẹ, người yêu, bạn bè và đồng nghiệp.',
+    content: 'Tặng mẹ hoa cẩm chướng hoặc hoa lan để bày tỏ lòng biết ơn; tặng người yêu bó hồng Ecuador rực rỡ; tặng bạn bè bó hoa hướng dương tươi sáng tràn đầy năng lượng tích cực.',
+    image: 'https://images.unsplash.com/photo-1561181286-d3fee7d55364?w=600&auto=format&fit=crop',
+    author: 'Admin BHShop',
+    createdAt: '2026-11-20',
+  },
+];

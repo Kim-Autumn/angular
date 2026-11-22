@@ -5,11 +5,19 @@
     </a>
     <a routerLink="/cart" class="cart" aria-label="Giỏ hàng">
       🛒
+      @if (cartCount() > 0) {
+        <span class="cart-badge">{{ cartCount() }}</span>
+      }
     </a>
   </div>
 
-  <form class="search" action="#" (submit)="$event.preventDefault()">
-    <input type="search" placeholder="Tìm bó hoa bạn yêu thích...">
+  <form class="search" (submit)="$event.preventDefault(); onSearch()">
+    <input
+      type="search"
+      [(ngModel)]="searchTerm"
+      name="search"
+      placeholder="Tìm bó hoa bạn yêu thích (Nhấn Enter)..."
+    />
   </form>
 </header>
 
@@ -25,6 +33,12 @@
     routerLink="/products"
     routerLinkActive="active">
     Sản phẩm
+  </a>
+
+  <a
+    routerLink="/bai_viet"
+    routerLinkActive="active">
+    Bài viết
   </a>
 
   <a

@@ -1,0 +1,35 @@
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+  <a routerLink="/">Trang chủ</a> &gt; <span>Bài viết & Cẩm nang</span>
+</div>
+
+<div class="blog-container">
+  <section class="page-heading">
+    <h1>📖 Góc chia sẻ & Cẩm nang hoa tươi</h1>
+    <p>Khám phá ý nghĩa các loài hoa, mẹo giữ hoa tươi lâu và nghệ thuật cắm hoa tại nhà.</p>
+  </section>
+
+  @if (isLoading()) {
+    <p style="text-align: center; padding: 40px; color: #888;">Đang tải danh sách bài viết...</p>
+  } @else {
+    <div class="blog-grid">
+      @for (blog of blogs(); track blog.id) {
+        <article class="blog-card">
+          <div class="blog-image">
+            <img [src]="blog.image" [alt]="blog.title">
+          </div>
+          <div class="blog-info">
+            <div class="blog-meta">
+              <span>✍️ {{ blog.author || 'BHShop' }}</span> • <span>📅 {{ blog.createdAt }}</span>
+            </div>
+            <h3 class="blog-title">{{ blog.title }}</h3>
+            <p class="blog-summary">{{ blog.summary }}</p>
+            <p class="blog-content">{{ blog.content }}</p>
+          </div>
+        </article>
+      } @empty {
+        <p style="text-align: center; padding: 40px; color: #888;">Chưa có bài viết nào.</p>
+      }
+    </div>
+  }
+</div>
