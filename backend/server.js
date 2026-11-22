@@ -86,8 +86,8 @@ const autoSeedIfEmpty = async () => {
 // Start Server after connecting to MongoDB
 connectDB().then(async () => {
   await autoSeedIfEmpty();
-  app.listen(PORT, () => {
-    console.log(`[Server] Backend running at http://localhost:${PORT}`);
+  app.listen(PORT, '0.0.0.0', () => {
+    console.log(`[Server] Backend running at port ${PORT}`);
     console.log(`[API] Products: http://localhost:${PORT}/api/products`);
     console.log(`[API] Categories: http://localhost:${PORT}/api/categories`);
     console.log(`[API] Banners: http://localhost:${PORT}/api/banners`);
